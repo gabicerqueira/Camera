@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Álbum Virtual</title>
+    <link rel="stylesheet" href="camera.css">
+    <link rel="icon" href="img/logoIcon.png">
+</head>
+
+<body>
+    <div class="botoes">
+        <button onclick="abrirCamera()">
+            <p>Abrir câmera</p>
+        </button>
+        <button onclick="tirarFoto()">
+            <p>Tirar foto</p>
+        </button>
+        <button onclick="fechar()">
+            <p>Fechar câmera</p>
+        </button>
+    </div>
+
+    <header>
+        <img src="img/logoIcon.png" alt="">
+        <h1>MEU ÁLBUM VIRTUAL</h1>
+
+    </header>
+
+    <h4>Compartilhe todas experiências que você teve na Passatempo Educativo!</h4>
+    <h6>Clique na foto que deseja para fazer dowload</h6>
+
+    <div class="tudo">
+        <div class="video-foto">
+            <video id="camera" autoplay></video>
+            <div id="foto"></div>
+        </div>
+
+    </div>
+
+
+    <script src="camera.js"></script>
+</body>
+
+</html>
