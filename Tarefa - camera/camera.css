@@ -37,7 +37,7 @@ body{
 
 .foto-container {
     position: relative;
-    width: 320px;
+    width: 350px;
     height: 270px;
     margin: 25px 60px;
     transition: transform 0.2s;
@@ -72,6 +72,12 @@ body{
     right: 8px;
     cursor: pointer;
     width: 30px;
+    transition: 0.3s ease;
+}
+
+.lixo-icon:hover{
+    transform: scale(0.9);
+    transition: 0.3s ease;
 }
 
 h1 {
