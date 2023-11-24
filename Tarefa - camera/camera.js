@@ -1,6 +1,14 @@
 var mediaStream;
 var fotos = [];
 
+window.onload = function () {
+    const storedFotos = localStorage.getItem('fotos');
+    if (storedFotos) {
+        fotos = JSON.parse(storedFotos);
+        exibirFotos();
+    }
+};
+
 function abrirCamera(){
     navigator.mediaDevices.getUserMedia({ video: true, audio: false})
     .then(function (stream){
@@ -28,6 +36,8 @@ function tirarFoto() {
     const imageDataUrl = canvas.toDataURL(); // convertendo a imagem para o formato base64
 
     fotos.push({ url: imageDataUrl, legenda: legenda }); // adiciona a foto ao array com a legenda
+
+    localStorage.setItem('fotos', JSON.stringify(fotos));
 
     exibirFotos(); // exibe todas as fotos na div 'foto'
 }
@@ -78,6 +88,8 @@ function exibirFotos() {
 
 function excluirFoto(index) {
     fotos.splice(index, 1);
+
+    localStorage.setItem('fotos', JSON.stringify(fotos));
     exibirFotos();
 }
 
